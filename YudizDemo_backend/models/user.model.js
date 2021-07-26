@@ -26,8 +26,7 @@ var UserSchema = new Schema({
         required: true,
     },
     authToken:{
-        type: String,
-        required: true,
+        type: String
     }
 }, schemaOptions);
 

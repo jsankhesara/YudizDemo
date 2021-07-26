@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
-import Login from "./Login";
-import Signup from "./Signup"
-import Home from "./Home"
+import Login from "./components/Login";
+import Signup from "./components/Signup"
+import Home from "./components/Home"
 import io from "socket.io-client";
 
 
@@ -23,19 +23,24 @@ socket.on('reconnect', (reason) => {
 });
 
 const App =()=> {
+
+  
   React.useEffect(()=>{
-    socket.on('user-logout', (param) => {
+    socket.on('user-logout', async(param) => {
+      debugger
       let token = localStorage.getItem('token')
       if(token !== null){
-        alert('Another user logged in !!!')
-        window.location.href = '/'
-        localStorage.removeItem('token')
-      }else{
-        localStorage.removeItem('token')
+        await onLogout();
       }
-      
     });
   },[])
+
+  const onLogout =async()=>{
+  await alert('Another user logged in !!!')
+  localStorage.removeItem('token')
+  window.location.href = '/'
+  
+  }
 
   return (
     <div className="App">

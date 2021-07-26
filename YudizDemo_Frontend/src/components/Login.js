@@ -35,9 +35,8 @@ const Login = (props) => {
                 if (res.is_error) {
                     toast.current.show({ severity: 'error', summary: 'Error Message', detail: res.message });
                 } else {
-                    props.history.push('/home')
-                    debugger
                     localStorage.setItem('token', res.data.authToken)
+                    props.history.push('/home')
                 }
             })
         }

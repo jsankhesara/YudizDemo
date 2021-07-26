@@ -29,7 +29,7 @@ const Signup = (props) => {
                 if (res.is_error) {
                     toast.current.show({ severity: 'error', summary: 'Error Message', detail: res.message });
                 } else {
-                    props.history.push('/home')
+                    props.history.push('/')
                 }
             })
         }

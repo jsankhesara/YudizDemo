@@ -42,6 +42,7 @@ exports.register = function (req, res) {
                 var data = new User(regObj);
                 User.create(data, function (err, user) {
                     if (err) {
+                        console.log("errr",err);
                         resHandlerService.handleError(res, "Something went wrong while creating user")
                     } else {
                         resHandlerService.handleResult(res, user, "Registered successfully.");
