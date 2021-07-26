@@ -1,0 +1,33 @@
+{
+  "name": "yudizdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsankhesara/YudizDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsankhesara/YudizDemo/issues"
+  },
+  "homepage": "https://github.com/jsankhesara/YudizDemo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "monc": "^0.1.2",
+    "mongoose": "^5.13.3",
+    "mongoose-autopopulate": "^0.14.0",
+    "nodemon": "^2.0.12",
+    "rate-limiter-flexible": "^2.2.3",
+    "redis": "^3.1.2",
+    "socket.io": "^4.1.3"
+  }
+}
