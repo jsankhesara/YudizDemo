@@ -98,6 +98,7 @@ exports.login = async function (req, res) {
                     if (resUsernameAndIP !== null && resUsernameAndIP.consumedPoints > 0) {
                         await limitByUsernameAndIP.delete(usernameIPkey);
                     }
+                    console.log("user.authToken",user.authToken);
                     if (user.authToken) {
                         if (global.socketConnection) {
                             global.socketConnection.emit('user-logout', { 'token': user.authToken });

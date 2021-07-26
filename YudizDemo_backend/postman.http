@@ -14,6 +14,6 @@ POST {{URL}}/api/query/login HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 {
-  "email":"jainamx123354@gmail.com",
-  "password":"12345678!!"
+  "email":"jainam@gmail.com",
+  "password":"12345"
 }
