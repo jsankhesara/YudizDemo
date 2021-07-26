@@ -29,7 +29,11 @@ const Signup = (props) => {
                 if (res.is_error) {
                     toast.current.show({ severity: 'error', summary: 'Error Message', detail: res.message });
                 } else {
-                    props.history.push('/')
+                    toast.current.show({ severity: 'success', summary: 'Success Message', detail: res.message });
+                    setTimeout(()=>{
+                        props.history.push('/')
+                    },[500])
+                   
                 }
             })
         }

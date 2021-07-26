@@ -49,21 +49,21 @@ const App = () => {
     );
   }
 
-    return (
-      <div className="App">
-        <Dialog header="Info" visible={visible} style={{ width: '20vw' }} footer={renderFooter}
-        >
-          <p>Another user logged In !!</p>
-        </Dialog>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path={`/`} component={Login} />
-            <Route exact path={`/signup`} component={Signup} />
-            <Route exact path={`/home`} component={Home} />
-          </Switch>
-        </BrowserRouter>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Dialog header="Info" visible={visible} style={{ width: '20vw' }} footer={renderFooter}
+      >
+        <p>Another user logged In !!</p>
+      </Dialog>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path={`/`} component={Login} />
+          <Route exact path={`/signup`} component={Signup} />
+          <Route exact path={`/home`} component={Home} />
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
+}
 
-  export default App;
+export default App;
